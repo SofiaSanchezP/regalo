@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carta</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -18,7 +22,6 @@
   <main>
     <div class="container-letter">
       <div class="cover"></div>
-      <span class="heart">♥</span>
       <p class="paper" id="mainMessage">
         Para mi amado no-muerto,<br>
         En esta era de tinieblas y cenizas, donde el sol se asoma pálido entre las ruinas, te escribo desde mi propia fogata, esperando el día en que nuestros caminos vuelvan a cruzarse. Eres mi faro en esta maldita tierra, la única alma que ilumina mi viaje.
@@ -37,16 +40,29 @@
     <div class="options">
       <button id="open">Abrir</button>
       <button id="close">Cerrar</button>
+      <button id="melancolico">Ponerse melancolico</button>
       <button id="volver">Guardar</button>
     </div>
   </main>
-  <section>
+  <section id="perdiste">
     <p id="texto-inicio">El fuego consumió la carta y, con ella, algo más despertó. La noche se tornó densa, el aire irrespirable. Desde las sombras emergió el Sabio de Cristal, su mirada ardiendo con furia antigua. No hubo escape. Un destello azul, un golpe certero… y la oscuridad lo cubrió todo.
       <br><br>
       HAS MUERTO</p>
       <div class="options">
         <button id="reiniciar">Reiniciar</button>
         </div>
+  </section>
+  <section id="melancolia">
+  <div class="galeria">
+      <img src="./imagenes/1.jpg" >
+      <img src="./imagenes/2.jpg" >
+      <img src="./imagenes/3.jpg" >
+      <img src="./imagenes/4.jpg" >
+      <img src="./imagenes/5.jpg" >
+  </div>
+  <div class="options">
+    <button id="reiniciarm">Reiniciar</button>
+    </div>
   </section>
   <script src="script.js"></script>
 </body>
