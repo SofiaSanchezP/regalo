@@ -1,19 +1,23 @@
 const headerElement = document.querySelector("header");
 const mainElement = document.querySelector("main");
-const sectionElement = document.querySelector("section");
+const perdisteElement = document.querySelector("#perdiste");
+const melancoliaElement = document.querySelector("#melancolia");
 
 const btnSacar = document.querySelector("#sacar");
 const btnQuemar = document.querySelector("#quemar");
-const btnVolver = document.querySelector("#volver"); // Volver al header
+const btnVolver = document.querySelector("#volver");
+const btnMelancolico = document.querySelector("#melancolico");
 const btnOpenElement = document.querySelector("#open");
 const btnCloseElement = document.querySelector("#close");
 const btnReiniciar = document.querySelector("#reiniciar");
+const btnReiniciarM = document.querySelector("#reiniciarm");
 const paperElement = document.querySelector(".paper");
 const coverElement = document.querySelector(".cover");
 
 // Ocultar el main al inicio
 mainElement.style.display = "none";
-sectionElement.style.display = "none";
+perdisteElement.style.display = "none";
+melancoliaElement.style.display = "none";
 
 // Mostrar el main y ocultar el header al presionar "Sacar la carta"
 btnSacar.addEventListener("click", () => {
@@ -64,7 +68,26 @@ btnVolver.addEventListener("click", () => {
 // Evento para perder
 btnQuemar.addEventListener("click", () => {
   headerElement.style.display = "none";
-  sectionElement.style.display = "flex";
+  perdisteElement.style.display = "flex";
+});
+
+// Evento para reiniciar
+btnReiniciar.addEventListener("click", () => {
+  perdisteElement.style.display = "none";
+  melancoliaElement.style.display = "none";
+  headerElement.style.display = "flex";
+});
+
+// Evento para ponerse melancolico
+btnMelancolico.addEventListener("click", () => {
+  mainElement.style.display = "none";
+ melancoliaElement.style.display = "flex";
+});
+
+// Evento para reiniciar despues de la melancolia
+btnReiniciarM.addEventListener("click", () => {
+  melancoliaElement.style.display = "none";
+  headerElement.style.display = "flex";
 });
 
 // Evento para reiniciar
