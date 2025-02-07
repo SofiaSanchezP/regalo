@@ -2,6 +2,7 @@ const headerElement = document.querySelector("header");
 const mainElement = document.querySelector("main");
 const perdisteElement = document.querySelector("#perdiste");
 const melancoliaElement = document.querySelector("#melancolia");
+const cargaElement = document.querySelector("#pantalla-carga");
 
 const btnSacar = document.querySelector("#sacar");
 const btnQuemar = document.querySelector("#quemar");
@@ -11,6 +12,7 @@ const btnOpenElement = document.querySelector("#open");
 const btnCloseElement = document.querySelector("#close");
 const btnReiniciar = document.querySelector("#reiniciar");
 const btnReiniciarM = document.querySelector("#reiniciarm");
+const btnEmpezar = document.querySelector("#empezar");
 const paperElement = document.querySelector(".paper");
 const coverElement = document.querySelector(".cover");
 
@@ -18,6 +20,13 @@ const coverElement = document.querySelector(".cover");
 mainElement.style.display = "none";
 perdisteElement.style.display = "none";
 melancoliaElement.style.display = "none";
+headerElement.style.display = "none";
+
+//boton empezar
+btnEmpezar.addEventListener("click", () => {
+  cargaElement.style.display = "none";
+  headerElement.style.display = "flex";
+});
 
 // Mostrar el main y ocultar el header al presionar "Sacar la carta"
 btnSacar.addEventListener("click", () => {
@@ -74,8 +83,7 @@ btnQuemar.addEventListener("click", () => {
 // Evento para reiniciar
 btnReiniciar.addEventListener("click", () => {
   perdisteElement.style.display = "none";
-  melancoliaElement.style.display = "none";
-  headerElement.style.display = "flex";
+  cargaElement.style.display = "flex";
 });
 
 // Evento para ponerse melancolico
@@ -87,8 +95,77 @@ btnMelancolico.addEventListener("click", () => {
 // Evento para reiniciar despues de la melancolia
 btnReiniciarM.addEventListener("click", () => {
   melancoliaElement.style.display = "none";
-  headerElement.style.display = "flex";
+  cargaElement.style.display = "flex";
 });
+
+//Sonido al abrir el main / carta
+let fondoCarta = new Audio("./sonido/sonidoFondo1.mp3");
+
+function reproducirSonidoC() {
+    fondoCarta.play();
+}
+
+function detenerSonidoC() {
+    fondoCarta.pause();
+    fondoCarta.currentTime = 0;
+}
+
+btnSacar.addEventListener("click", reproducirSonidoC);
+btnVolver.addEventListener("click", detenerSonidoC);
+btnMelancolico.addEventListener("click", detenerSonidoC);
+
+//Sonido al esar en el inicio
+let fondoInicio = new Audio("./sonido/sonidoFondo0.mp3");
+
+function reproducirSonidoI() {
+    fondoInicio.play();
+}
+
+function detenerSonidoI() {
+    fondoInicio.pause();
+    fondoInicio.currentTime = 0;
+}
+
+btnVolver.addEventListener("click", reproducirSonidoI);
+btnEmpezar.addEventListener("click", reproducirSonidoI);
+btnSacar.addEventListener("click", detenerSonidoI);
+btnQuemar.addEventListener("click", detenerSonidoI);
+
+//Sonido en perdiste
+let sonidoYouDied = new Audio("./sonido/youDied.mp3");
+
+function reproducirSonidoYD() {
+  sonidoYouDied.play();
+}
+
+function detenerSonidoYD() {
+  sonidoYouDied.pause();
+  sonidoYouDied.currentTime = 0;
+}
+
+btnQuemar.addEventListener("click", reproducirSonidoYD);
+btnReiniciar.addEventListener("click", detenerSonidoYD);
+
+//Sonido melancolia
+let fondoMelancolia = new Audio("./sonido/sonidoFondo2.mp3");
+
+function reproducirSonidoM() {
+  fondoMelancolia.play();
+}
+
+function detenerSonidoM() {
+  fondoMelancolia.pause();
+  fondoMelancolia.currentTime = 0;
+}
+
+btnMelancolico.addEventListener("click", reproducirSonidoM);
+btnReiniciarM.addEventListener("click", detenerSonidoM);
+
+fondoInicio.volume = 0.1;
+fondoCarta.volume = 0.3;
+sonidoYouDied.volume = 0.2;
+fondoMelancolia.volume = 0.2;
+
 
 // Evento para reiniciar
 btnReiniciar.addEventListener("click", () => {
