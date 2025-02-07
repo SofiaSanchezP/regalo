@@ -43,7 +43,7 @@ p {
 
 /* Estilos generales */
 
-header {
+#pantalla-carga{
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -53,10 +53,37 @@ header {
   padding: 0;
   height: 100vh; /* Altura completa de la pantalla */
   width: 100vw;  /* Ancho completo de la pantalla */
-  background-image: url('./imagenes/fondo.png'); /* Ruta de la imagen */
+  background-image: url('./imagenes/carga.png'); /* Ruta de la imagen */
   background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+#pantalla-carga h1 {
+  font-size: 50px;
+  color: rgb(207, 180, 26);
+  width: 100vw;
+  background-color: #252525c4;
+  font-family: 'ds';
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;  
+  background-image: url('./imagenes/fondo.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 #texto-inicio {
@@ -77,12 +104,12 @@ main {
   gap: 10rem;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Altura completa de la pantalla */
-  width: 100vw;  /* Ancho completo de la pantalla */
-  background-image: url('./imagenes/leyendo.png'); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh; 
+  width: 100vw;  
+  background-image: url('./imagenes/leyendo.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 /* Carta */
@@ -98,7 +125,7 @@ main {
   position: absolute;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-top: 100px solid #a75d2c;
+  border-top: 100px solid #a75d2cf3;
   border-bottom: 100px solid transparent;
   transition: transform .75s;
   transform-origin: top;
@@ -108,24 +135,24 @@ main {
   position: absolute;
   line-height: 1.4rem;
   right: 5px;
-  background: rgb(187, 161, 112);
+  background: rgba(187, 161, 112, 0.9);
   width: 200%;
   overflow: hidden;
   padding: 0;
   opacity: 0;
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 2px;
   text-align: justify;
   margin: 0 auto;
   font-family: 'letra';
 }
 
 .letter {
-  border-left: 200px solid #b36e41;
-  border-right: 200px solid #b36e41;
+  border-left: 200px solid #b36f41f8;
+  border-right: 200px solid #b36f41f8;
   border-top: 100px solid transparent;
-  border-bottom: 100px solid #c97339;
+  border-bottom: 100px solid #c97339d4;
 }
 
 .options {
@@ -174,12 +201,12 @@ main {
 }
 
 #perdiste {
-  height: 100vh; /* Altura completa de la pantalla */
-  width: 100vw;  /* Ancho completo de la pantalla */
-  background-image: url('./imagenes/perdiste.png'); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh; 
+  width: 100vw;  
+  background-image: url('./imagenes/perdiste.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 #oscurecer{
@@ -188,7 +215,7 @@ main {
   background-color: rgba(0, 0, 0, 0.555);
   display: flex;
   flex-direction: column;
-  gap: 7rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
 }
@@ -207,33 +234,36 @@ main {
 
 /* fotos */
 #melancolia {
-  height: 100vh; /* Altura completa de la pantalla */
-  width: 100vw;  /* Ancho completo de la pantalla */
-  background-image: url('./imagenes/fotos.png'); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh; 
+  width: 100vw; 
+  background-image: url('./imagenes/fotos.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
 .galeria {
-  --d: 20s; 
+  --d: 30s; 
   display: grid;
   place-items: center;
   width: 320px;
+  height: 500px;
+  margin-top: 20px;
 }
 
 .galeria > img {
   grid-area: 1/1;
   width: 100%;
+  height: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border: 10px solid #cc8b6d;
+  border: 10px solid #caad8def;
   box-shadow: 0 0 4px #0007;
   z-index: 2;
   animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
@@ -244,10 +274,15 @@ main {
 }
 
 .galeria > img:nth-child(1) { animation-delay: calc(0 * var(--d)); --r: 16deg; }
-.galeria > img:nth-child(2) { animation-delay: calc(-0.2 * var(--d)); --r: -1deg; }
-.galeria > img:nth-child(3) { animation-delay: calc(-0.4 * var(--d)); --r: -19deg; }
-.galeria > img:nth-child(4) { animation-delay: calc(-0.6 * var(--d)); --r: 6deg; }
-.galeria > img:nth-child(5) { animation-delay: calc(-0.8 * var(--d)); --r: -8deg; }
+.galeria > img:nth-child(2) { animation-delay: calc(-0.1 * var(--d)); --r: -1deg; }
+.galeria > img:nth-child(3) { animation-delay: calc(-0.2 * var(--d)); --r: -19deg; }
+.galeria > img:nth-child(4) { animation-delay: calc(-0.3 * var(--d)); --r: 6deg; }
+.galeria > img:nth-child(5) { animation-delay: calc(-0.4 * var(--d)); --r: -8deg; }
+.galeria > img:nth-child(6) { animation-delay: calc(-0.5 * var(--d)); --r: 11deg; }
+.galeria > img:nth-child(7) { animation-delay: calc(-0.6 * var(--d)); --r: 9deg; }
+.galeria > img:nth-child(8) { animation-delay: calc(-0.7 * var(--d)); --r: -13deg; }
+.galeria > img:nth-child(9) { animation-delay: calc(-0.8 * var(--d)); --r: 2deg; }
+.galeria > img:nth-child(10) { animation-delay: calc(-0.9 * var(--d)); --r: -15deg; }
 
 @keyframes slide {
   10% { transform: translateX(120%) rotate(var(--r)); }
@@ -265,8 +300,6 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  #brillo { font-size: 22px; }
-  
   .galeria {
       width: 150px;
       margin-left: 60px;
