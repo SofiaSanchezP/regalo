@@ -60,10 +60,11 @@ header {
 }
 
 #texto-inicio {
-  background: rgb(148, 87, 13);
+  background: linear-gradient(to top, #1e1e2f, rgba(0, 0, 0, 0.699));
   color: #e6e0e0;
-  padding: 1%;
-  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  border-radius: 1px;
   font-family: 'ds';
   margin: 20%;
   margin-bottom: 0;
@@ -107,7 +108,7 @@ main {
   position: absolute;
   line-height: 1.4rem;
   right: 5px;
-  background: white;
+  background: rgb(187, 161, 112);
   width: 200%;
   overflow: hidden;
   padding: 0;
@@ -128,23 +129,28 @@ main {
 }
 
 .options {
+  width: auto;
+  padding: 10px 20px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 5rem;
+  background-color: #252525c4;
 }
 
 .options button {
-  color: #252525;
-  font-weight: 600;
-  border-radius: 3px;
-  background: #c9a07f;
-  padding: 0.5rem 1rem;
-  border: 1px solid #e6e0e0;
+  font-family: 'ds';
+  color: #e6e0e0;
+  border-radius: 1px;
+  background-color: transparent;
+  padding: 0.2rem 5rem;
+  border: 2px solid #707070a9;
   cursor: pointer;
 }
 
 .options button:hover {
-  background: rgb(148, 87, 13);
-  color: #fad7df;
+  border: 2px solid #c28920a9;
 }
 
 .open-cover {
@@ -167,17 +173,34 @@ main {
 }
 
 #perdiste {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
-  justify-content: center;
-  align-items: center;
   height: 100vh; /* Altura completa de la pantalla */
   width: 100vw;  /* Ancho completo de la pantalla */
   background-image: url('./imagenes/perdiste.png'); /* Ruta de la imagen */
   background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+#oscurecer{
+  height: 100vh; 
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.555);
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#perdiste h1 {
+  font-size: 50px;
+  color: rgb(207, 26, 26);
+  width: 100vw;
+  font-weight: 600;
+  background-color: #252525c4;
+  font-family: 'ds';
+  text-align: center;
+  padding: 20px 0;
 }
 
 
