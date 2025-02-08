@@ -132,7 +132,7 @@ btnSacar.addEventListener("click", detenerSonidoI);
 btnQuemar.addEventListener("click", detenerSonidoI);
 
 //Sonido en perdiste
-let sonidoYouDied = new Audio("./sonido/youDied.mp3");
+let sonidoYouDied = new Audio("./sonido/youdied.mp3");
 
 function reproducirSonidoYD() {
   sonidoYouDied.play();
