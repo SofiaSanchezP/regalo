@@ -15,7 +15,7 @@ const btnReiniciar = document.querySelector("#reiniciar");
 const btnReiniciarM = document.querySelector("#reiniciarm");
 const btnReiniciarC = document.querySelector("#reiniciarc");
 const btnEmpezar = document.querySelector("#empezar");
-const btnCreditos = document.querySelector("#btnCreditos");
+const btnCreditos = document.querySelector("#carga-creditos");
 const paperElement = document.querySelector(".paper");
 const coverElement = document.querySelector(".cover");
 
