@@ -3,7 +3,7 @@ const mainElement = document.querySelector("main");
 const perdisteElement = document.querySelector("#perdiste");
 const melancoliaElement = document.querySelector("#melancolia");
 const cargaElement = document.querySelector("#pantalla-carga");
-const creditosElement = document.querySelector("#creditos");
+const creditosElement = document.querySelector("#creditos-inicio");
 
 const btnSacar = document.querySelector("#sacar");
 const btnQuemar = document.querySelector("#quemar");
