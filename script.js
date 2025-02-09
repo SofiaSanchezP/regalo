@@ -3,7 +3,7 @@ const mainElement = document.querySelector("main");
 const perdisteElement = document.querySelector("#perdiste");
 const melancoliaElement = document.querySelector("#melancolia");
 const cargaElement = document.querySelector("#pantalla-carga");
-const creditosElement = document.querySelector("#creditos-inicio");
+const creditosElement = document.querySelector("#creditos");
 
 const btnSacar = document.querySelector("#sacar");
 const btnQuemar = document.querySelector("#quemar");
@@ -17,6 +17,7 @@ const btnReiniciarC = document.querySelector("#reiniciarc");
 const btnEmpezar = document.querySelector("#empezar");
 const paperElement = document.querySelector(".paper");
 const coverElement = document.querySelector(".cover");
+const btnCreditos = document.querySelector("#btnCreditos");
 
 // Ocultar pantallas
 mainElement.style.display = "none";
