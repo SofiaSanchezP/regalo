@@ -3,7 +3,6 @@ const mainElement = document.querySelector("main");
 const perdisteElement = document.querySelector("#perdiste");
 const melancoliaElement = document.querySelector("#melancolia");
 const cargaElement = document.querySelector("#pantalla-carga");
-const creditosElement = document.querySelector("#creditos");
 
 const btnSacar = document.querySelector("#sacar");
 const btnQuemar = document.querySelector("#quemar");
@@ -13,35 +12,20 @@ const btnOpenElement = document.querySelector("#open");
 const btnCloseElement = document.querySelector("#close");
 const btnReiniciar = document.querySelector("#reiniciar");
 const btnReiniciarM = document.querySelector("#reiniciarm");
-const btnReiniciarC = document.querySelector("#reiniciarc");
 const btnEmpezar = document.querySelector("#empezar");
 const paperElement = document.querySelector(".paper");
 const coverElement = document.querySelector(".cover");
-const btnCreditos = document.querySelector("#elCreditos");
 
 // Ocultar pantallas
 mainElement.style.display = "none";
 perdisteElement.style.display = "none";
 melancoliaElement.style.display = "none";
 headerElement.style.display = "none";
-creditosElement.style.display = "none";
 
 //boton empezar
 btnEmpezar.addEventListener("click", () => {
   cargaElement.style.display = "none";
   headerElement.style.display = "flex";
-});
-
-//boton creditos
-btnCreditos.addEventListener("click", () => {
-  cargaElement.style.display = "none";
-  creditosElement.style.display = "flex";
-});
-
-//boton reiniciar en creditos
-btnReiniciarC.addEventListener("click", () => {
-  creditosElement.style.display = "none";
-  cargaElement.style.display = "flex";
 });
 
 // Mostrar el main y ocultar el header al presionar "Sacar la carta"
