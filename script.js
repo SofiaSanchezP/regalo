@@ -17,7 +17,7 @@ const btnReiniciarC = document.querySelector("#reiniciarc");
 const btnEmpezar = document.querySelector("#empezar");
 const paperElement = document.querySelector(".paper");
 const coverElement = document.querySelector(".cover");
-const btnCreditos = document.querySelector("#btnCreditos");
+const btnCreditos = document.querySelector("#elCreditos");
 
 // Ocultar pantallas
 mainElement.style.display = "none";
