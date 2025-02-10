@@ -69,6 +69,16 @@ document.addEventListener("DOMContentLoaded", function() {
   buttons.reiniciarM.addEventListener("click", () => cambiarPantalla("carga"));
   buttons.volver.addEventListener("click", () => cambiarPantalla("header", "inicio"));
 
+// Asegúrate de ocultar todas las pantallas
+const pantallas = document.querySelectorAll('.pantalla');
+pantallas.forEach(pantalla => {
+  pantalla.classList.remove('activa'); // Elimina la clase activa
+});
+
+// Luego, agrega la clase 'activa' a la pantalla que debe ser visible
+const pantallaActiva = document.querySelector('#pantalla-que-debe-ser-visible'); // Cambia esto por la lógica correcta
+pantallaActiva.classList.add('activa');
+
   // Manejo de la carta
   buttons.close.disabled = true;
   elements.paper.classList.add("close-paper");
