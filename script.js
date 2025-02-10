@@ -167,10 +167,13 @@ sonidoYouDied.volume = 0.2;
 fondoMelancolia.volume = 0.2;
 
 function actualizarFecha() {
-  const ahora = new Date();
-  const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'};
-  document.getElementById("fecha").textContent = ahora.toLocaleDateString('es-ES', opciones);
-}
+            const ahora = new Date();
+            const opciones = { 
+                weekday: 'long', year: 'numeric', month: 'long', 
+                day: 'numeric', hour: '2-digit', minute: '2-digit' 
+            };
+            document.getElementById("fecha").textContent = ahora.toLocaleDateString('es-ES', opciones);
+        }
 
-setInterval(actualizarFecha, 1000); // Actualiza cada segundo
-actualizarFecha(); // Llamada inicial
+        setInterval(actualizarFecha, 1000); // Actualiza cada segundo
+        actualizarFecha(); // Llamada inicial
