@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
   const elements = {
     header: document.querySelector("header"),
     main: document.querySelector("main"),
